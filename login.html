@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+
+
+    <style>
+        body {
+            background-image: url(ice-2.jpg);
+        }
+        h2{
+            font-size: 35px;
+        }
+        h1{
+            justify-content: center;
+            display: flex;
+            font-size: 50px;
+        }
+        form {
+            background-color: rgba(240, 248, 255, 0.269);
+            margin: 20%;
+            padding: 5%;
+            margin-left: 35%;
+            margin-right: 35%;
+            margin-top: auto;
+            border-radius: 10px;
+        }
+        .text{
+            font-size: 25px;
+            justify-content: center;
+            
+        }
+        .contact {
+            background-color: white;
+            text-align: center;
+            /* margin: 2em 0; */
+            padding: 1em;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: -70px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+    <script>
+        function loginvalidation() {
+            var uname = document.myform.username.value;
+            var password = document.myform.password.value;
+            if (uname == null || uname == "") {
+                alert("Name can't be blank")
+                return false;
+            }
+            else if (password.length < 6) {
+                alert("password Must be used in special character")
+                return false;
+            }
+            return true;
+        }
+        
+        
+    </script>
+</head>
+
+<body>
+    <h1>
+        <u>Login Page</u>
+    </h1>
+
+
+    <form name="myform" action="Success.html" onsubmit="return loginvalidation(this)">
+        <center>
+            <h2>Sign us!!</h2>
+        </center>
+        <div class="text"><p>User Name:<input type="text" name="username" placeholder="Enter your username" autofocus></p>
+        <p>Password:<input type="password" name="password" placeholder="Enter your password"></p><br></div>
+        <center><input type="submit" value="submit"></center>
+    </form>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>------,pace ITS, Ongole, Food City</p>
+        <p>Email: Srujancherivella@gmail.com</p>
+        <p>Phone: 7013659693</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Foody Lovers. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
